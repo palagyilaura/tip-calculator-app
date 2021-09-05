@@ -105,128 +105,127 @@ function Calculator() {
             Select Tip %
           </label>
           <div className="tips">
-            <div className="row">
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  onFocus={tipHandle}
-                  onChange={selectedOp}
-                  checked={radioChecked === "5"}
-                  value={5}
-                  id="tip5"
-                  name="tip-value"
-                />
-                <label htmlFor="tip5" className="col">
-                  5%
-                </label>
-              </div>
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  onFocus={tipHandle}
-                  onChange={selectedOp}
-                  checked={radioChecked === "10"}
-                  //onClick={setradioChecked(true)}
-                  //checked={radioChecked}
-                  value={10}
-                  id="tip10"
-                  name="tip-value"
-                />
-                <label htmlFor="tip10" className="col">
-                  10%
-                </label>
-              </div>
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  onChange={selectedOp}
-                  checked={radioChecked === "15"}
-                  //onClick={setradioChecked(true)}
-                  //checked={radioChecked}
-                  onFocus={tipHandle}
-                  value={15}
-                  id="tip15"
-                  name="tip-value"
-                />
-                <label htmlFor="tip15" className="col">
-                  15%
-                </label>
-              </div>
-            </div>
-            <div className="row">
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  //onClick={setradioChecked(true)}
-                  //checked={radioChecked}
-                  onChange={selectedOp}
-                  checked={radioChecked === "25"}
-                  onFocus={tipHandle}
-                  value={25}
-                  id="tip25"
-                  name="tip-value"
-                />
-                <label htmlFor="tip25" className="col">
-                  25%
-                </label>
-              </div>
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  //checked={radioChecked}
-                  onChange={selectedOp}
-                  checked={radioChecked === "50"}
-                  onFocus={tipHandle}
-                  value={50}
-                  id="tip50"
-                  name="tip-value"
-                />
-                <label htmlFor="tip50" className="col">
-                  50%
-                </label>
-              </div>
-              <div className="tipCard">
-                <input
-                  type="radio"
-                  onChange={selectedOp}
-                  checked={
-                    radioChecked === "12" ||
-                    radioChecked === "13" ||
-                    radioChecked === "14" ||
-                    radioChecked === "16" ||
-                    radioChecked === "17" ||
-                    radioChecked === "18" ||
-                    radioChecked === "19" ||
-                    radioChecked === "30" ||
-                    radioChecked === "40"
-                  }
-                  value={tip}
-                  onFocus={tipHandle}
-                  id="custom"
-                  name="tip-value"
-                />
 
-                <input
-                  className="col-input"
-                  type="number"
-                  placeholder="Custom"
-                  min={1}
-                  maxLength={2}
-                  max={50}
-                  htmlFor="custom"
-                  value={tip === "0" || tip === 0 ? "" : console.log(tip)}
-                  onFocus={focusHandle}
-                  onChange={customHandle}
-                />
-                <p
-                  className="error2"
-                  style={{
-                    display: Number(tip) > 50 ? "inline-block" : "none",
-                  }}
-                >
-                  Max. 50
-                </p>
-              </div>
+            <div className="tipCard">
+              <input
+                type="radio"
+                onFocus={tipHandle}
+                onChange={selectedOp}
+                checked={radioChecked === "5"}
+                value={5}
+                id="tip5"
+                name="tip-value"
+              />
+              <label htmlFor="tip5" className="col">
+                5%
+              </label>
+            </div>
+            <div className="tipCard">
+              <input
+                type="radio"
+                onFocus={tipHandle}
+                onChange={selectedOp}
+                checked={radioChecked === "10"}
+                //onClick={setradioChecked(true)}
+                //checked={radioChecked}
+                value={10}
+                id="tip10"
+                name="tip-value"
+              />
+              <label htmlFor="tip10" className="col">
+                10%
+              </label>
+            </div>
+            <div className="tipCard">
+              <input
+                type="radio"
+                onChange={selectedOp}
+                checked={radioChecked === "15"}
+                //onClick={setradioChecked(true)}
+                //checked={radioChecked}
+                onFocus={tipHandle}
+                value={15}
+                id="tip15"
+                name="tip-value"
+              />
+              <label htmlFor="tip15" className="col">
+                15%
+              </label>
+            </div>
+
+            <div className="tipCard">
+              <input
+                type="radio"
+                //onClick={setradioChecked(true)}
+                //checked={radioChecked}
+                onChange={selectedOp}
+                checked={radioChecked === "25"}
+                onFocus={tipHandle}
+                value={25}
+                id="tip25"
+                name="tip-value"
+              />
+              <label htmlFor="tip25" className="col">
+                25%
+              </label>
+            </div>
+            <div className="tipCard">
+              <input
+                type="radio"
+                //checked={radioChecked}
+                onChange={selectedOp}
+                checked={radioChecked === "50"}
+                onFocus={tipHandle}
+                value={50}
+                id="tip50"
+                name="tip-value"
+              />
+              <label htmlFor="tip50" className="col">
+                50%
+              </label>
+            </div>
+            <div className="tipCard">
+              <input
+                type="radio"
+                onChange={selectedOp}
+                checked={
+                  radioChecked === "12" ||
+                  radioChecked === "13" ||
+                  radioChecked === "14" ||
+                  radioChecked === "16" ||
+                  radioChecked === "17" ||
+                  radioChecked === "18" ||
+                  radioChecked === "19" ||
+                  radioChecked === "30" ||
+                  radioChecked === "40"
+                }
+                value={tip}
+                onFocus={tipHandle}
+                id="custom"
+                name="tip-value"
+              />
+
+              <input
+                className="col-input"
+                type="number"
+                placeholder="Custom"
+                min={1}
+                maxLength={2}
+                max={50}
+                htmlFor="custom"
+                value={tip === "0" || tip === 0 ? "" : console.log(tip)}
+                onFocus={focusHandle}
+                onChange={customHandle}
+              />
+              <p
+                className="error2"
+                style={{
+                  display: Number(tip) > 50 ? "inline-block" : "none",
+                }}
+              >
+                Max. 50
+              </p>
+
             </div>
           </div>
         </section>
