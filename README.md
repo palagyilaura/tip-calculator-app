@@ -1,3 +1,5 @@
+<i>Live Example:</i> <a href="https://larap-tip-calculator.vercel.app/">Tip Calculator</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
